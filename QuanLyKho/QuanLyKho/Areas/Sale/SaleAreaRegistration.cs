@@ -17,7 +17,7 @@ namespace QuanLyKho.Areas.Sale
             context.MapRoute(
                 "Sale_default",
                 "Sale/{controller}/{action}/{id}",
-                new {controller="", action = "Index", id = UrlParameter.Optional }
+                new {controller="Sale", action = "Index", id = UrlParameter.Optional }
             );
         }
     }
