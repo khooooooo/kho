@@ -1,0 +1,137 @@
+﻿@model IEnumerable<QuanLyKho.Models.Entities.HangHoa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiHang.TenLH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhomHang.TenNH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenHH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KichThuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhoiLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgaySX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HanSD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoSX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaBan)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaNhap)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrinhTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DinhMuc)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiHang.TenLH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhomHang.TenNH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TenHH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SoLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KichThuoc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KhoiLuong)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgaySX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HanSD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoSX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaBan)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaNhap)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TrinhTrang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DinhMuc)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaHH }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaHH }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaHH })
+        </td>
+    </tr>
+}
+
+</table>
+@section HangHoa{
+    <div style="padding:10px;">
+        <h3><small>Tìm kiếm</small></h3>
+        <input type="text" class="form-control" value="Tìm kiếm mặt hàng" />
+        <h3><small>Loại hàng</small></h3>
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> Combo - đóng gói
+        </label><br />
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> Dịch vụ
+        </label><br />
+        <label class="checkbox-inline">
+            <input type="checkbox" id="inlineCheckbox1" value="option1"> Hàng hóa
+        </label><br />
+
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Hôm nay
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tuần này
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tháng này
+        </label><br />
+
+
+        <h3><small>Nhóm hàng</small></h3>
+        <p>An empty street, an empty house</p>
+
+    </div>
+
+}

@@ -1,0 +1,123 @@
+﻿@model IEnumerable<QuanLyKho.Models.Entities.HoaDon>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DoiTac.MaSoThue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhanVien.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TienTra)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiHD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoiTac.MaSoThue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhanVien.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NgayTao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TinhTrang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TienTra)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiHD)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaHD }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaHD }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaHD })
+        </td>
+    </tr>
+}
+
+</table>
+@section GiaoDich{
+    <div style="padding:10px;">
+        <h3><small>Tìm kiếm</small></h3>
+        <input type="text" class="form-control" value="mã hàng, tên hàng" />
+        <input type="text" class="form-control" value="mã hóa đơn" />
+        <input type="text" class="form-control" value=" mã KH hoắc tên KH" />
+        <input type="text" class="form-control" value="theo người tạo" />
+        <h3><small>Lọc theo trạng thái</small></h3>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Đã hoàn thành
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Đã hủy
+        </label><br />
+        <h3><small>Loại Hóa Đơn</small></h3>
+        <input type="radio" name="loaihoadon" value="nhap" />Hóa đơn nhập
+        <br />
+        <input type="radio" name="loaihoadon" value="xuat" />Hóa đơn xuất
+        <br />
+        <h3><small>Lọc theo thời gian</small></h3>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Toàn thời gian
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Hôm nay
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tuần này
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tháng này
+        </label><br />
+
+        <div class="row">
+            <div class='col-sm-5'>
+                <div class="form-group">
+                    <div class='input-group date' id='datetimepicker1'>
+                        <input type='text' class="form-control" />
+                        <span class="input-group-addon">
+                            <span class="glyphicon glyphicon-calendar"></span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+            $(function () {
+                $('#datetimepicker1').datetimepicker({
+                    defaultDate: "11/1/2013",
+                    disabledDates: [
+                        moment("12/25/2013"),
+                        new Date(2013, 11 - 1, 21),
+                        "11/22/2013 00:53"
+                    ]
+                });
+            });
+            </script>
+
+        </div>
+    </div>
+}

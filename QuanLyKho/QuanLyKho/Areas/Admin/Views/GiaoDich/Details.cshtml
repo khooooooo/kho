@@ -1,0 +1,66 @@
+﻿@model QuanLyKho.Models.Entities.HoaDon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>HoaDon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DoiTac.MaSoThue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoiTac.MaSoThue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NhanVien.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NhanVien.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NgayTao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NgayTao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TinhTrang)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TinhTrang)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TienTra)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TienTra)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiHD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiHD)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaHD }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
