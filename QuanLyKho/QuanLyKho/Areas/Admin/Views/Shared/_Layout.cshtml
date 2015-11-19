@@ -85,7 +85,7 @@
                 <div id="navbar" class="navbar-collapse collapse col-md-6 col-md-offset-3">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tổng Quan </a>
+                          @Html.ActionLink("Tổng quan", "Index",  "Home")
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hàng Hóa </a>
@@ -97,7 +97,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giao Dịch </a>
+                            @Html.ActionLink("Giao Dịch", "Index", "GiaoDich")
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Đối tác </a>
@@ -108,7 +108,10 @@
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sổ quỹ</a>
-
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Vốn đầu tư</a></li>
+                                <li><a href="#">Phiếu chi tiêu</a></li>
+                            </ul>
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Báo Cáo </a>
@@ -120,7 +123,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Công nợ </a>
+                            @Html.ActionLink("Công Nợ", "Index", "CongNoes")
                         </li>
                     </ul>
 
@@ -133,7 +136,10 @@
             @RenderSection("HangHoa", false)
             @RenderSection("GiaoDich", false)
             @RenderSection("DoiTac", false)
-
+            @RenderSection("VonDauTu", false)
+            @RenderSection("PhieuThuChi", false)
+            @RenderSection("BaoCao", false)
+            @RenderSection("CongNo", false)
 
         </div>
         <!-- /.navbar-static-side -->

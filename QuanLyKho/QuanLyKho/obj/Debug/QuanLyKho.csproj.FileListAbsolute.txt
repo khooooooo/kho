@@ -35,3 +35,40 @@ E:\Kho\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.xml
 E:\Kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
 E:\Kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.dll
 E:\Kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\csc.exe
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\System.Collections.Immutable.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\System.Reflection.Metadata.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\vbc.exe
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\VBCSCompiler.exe
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\roslyn\VBCSCompiler.exe.config
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll.config
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\QuanLyKho.pdb
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Web.Infrastructure.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Razor.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Razor.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.xml
+E:\Do An\kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
+E:\Do An\kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.dll
+E:\Do An\kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb

@@ -13,6 +13,7 @@ namespace QuanLyKho
         {
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+            ControllerBuilder.Current.DefaultNamespaces.Add("QuanLyKho.Areas.Main.Controllers");
         }
     }
 }

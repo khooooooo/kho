@@ -1,0 +1,84 @@
+﻿@model IEnumerable<QuanLyKho.Models.Entities.PhieuThuChi>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DoiTac.MaSoThue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoaDon.TenTK_NV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiPhieu)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Thoigian)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTri)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoiTac.MaSoThue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoaDon.TenTK_NV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiPhieu)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Thoigian)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaTri)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaPH }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaPH }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaPH })
+        </td>
+    </tr>
+}
+
+</table>
+@section PhieuThuChi
+    {
+    <div style="padding:10px">
+        <h3><small>Tìm kiếm</small></h3>
+        <input  type="search" class="form-control"/>
+        <small> Tìm kiếm theo tên nhân viên, người nộp/nhận</small>
+        <h3><small>Loại Phiếu</small></h3>
+        <input type="radio" name="phieu" value="all" />Tất cả
+        <br />
+        <input type="radio" name="phieu" value="chi" />Phiếu chi
+        <br />
+        <input type="radio" name="phieu" value="thu" />Phiếu thu
+        <h3><small>Lọc Thời gian</small></h3>
+        <input type="radio" name="time" value="all" />Toàn thời gian
+        <br />
+        <input type="radio" name="time" value="ngay" />Hôm nay
+        <br />
+        <input type="radio" name="time" value="tuan" />Tuần này
+        <br />
+        <input type="radio" name="time" value="thang" />Tháng này
+        <h3><small>Lựa chọn ngày</small></h3>
+        <span unselectable="on"  title="Chọn ngày tháng" role="button" aria-controls="fromDate_dateview">
+            <input type="datetime-local"/>
+        </span>
+    </div>
+    }

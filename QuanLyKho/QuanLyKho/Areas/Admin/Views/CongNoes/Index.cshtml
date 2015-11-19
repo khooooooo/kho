@@ -1,0 +1,71 @@
+﻿@model IEnumerable<QuanLyKho.Models.Entities.CongNo>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DoiTac.MaSoThue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoaDon.TenTK_NV)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoaiCN)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GiaTri)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DoiTac.MaSoThue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HoaDon.TenTK_NV)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoaiCN)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GiaTri)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaCN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaCN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaCN })
+        </td>
+    </tr>
+}
+
+</table>
+@section CongNo{
+<div style="padding:10px">
+    <h3><small>Tìm kiếm</small></h3>
+    <input type="search" class="form-control" />
+    <small> Tìm kiếm theo Tên đối tác, mã</small>
+    <h3><small>Mối quan tâm</small></h3>
+    <input type="radio" name="dt" value="kh" />Khách hàng
+    <br />
+    <input type="radio" name="dt" value="ncc" />Nhà Cung Cấp
+    <h3><small>Lọc Thời gian</small></h3>
+    <input type="radio" name="time" value="all" />Toàn thời gian
+    <br />
+    <input type="radio" name="time" value="thang" />Tháng
+    <br />
+    <input type="radio" name="time" value="quy" />Quý
+    <br />
+    <input type="radio" name="time" value="nam" />Năm
+</div>
+    }
