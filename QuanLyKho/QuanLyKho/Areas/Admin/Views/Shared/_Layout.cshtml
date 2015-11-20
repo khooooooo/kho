@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>SB Admin 2 - Bootstrap Admin Theme</title>
+    <title>@ViewBag.Title- Quản Lí Kho</title>
     <!-- Bootstrap Core CSS -->
     <link href="~/Assets/Admin/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- MetisMenu CSS -->
@@ -84,8 +84,7 @@
                 <div id="navbar" class="navbar-collapse collapse col-md-6 col-md-offset-3">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                           Tổng quan </a>
+                            @Html.ActionLink("Tổng quan", "Index","Home")
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
