@@ -131,7 +131,7 @@
     <Content Include="Areas\Admin\Views\HangHoa\Index.cshtml" />
     <Content Include="Areas\Sale\Views\Sale\Index.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_NhomHang.cshtml" />
-    <Content Include="Areas\Admin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TongQuan\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -144,7 +144,7 @@
     <Compile Include="Areas\Admin\Controllers\DoiTacController.cs" />
     <Compile Include="Areas\Admin\Controllers\GiaoDichController.cs" />
     <Compile Include="Areas\Admin\Controllers\HangHoaController.cs" />
-    <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TongQuanController.cs" />
     <Compile Include="Areas\Main\Controllers\HomeController.cs" />
     <Compile Include="Areas\Main\MainAreaRegistration.cs" />
     <Compile Include="Areas\Sale\Controllers\SaleController.cs" />
