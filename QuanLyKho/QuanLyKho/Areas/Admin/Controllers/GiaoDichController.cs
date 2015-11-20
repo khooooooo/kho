@@ -49,13 +49,22 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "MaHD,NgayTao,TinhTrang,TienTra,LoaiHD,TenTK_NV,MADT")] HoaDon hoaDon)
+        public ActionResult Create( HoaDon hoaDon)
         {
             if (ModelState.IsValid)
             {
-                db.HoaDons.Add(hoaDon);
+                HoaDon newHD = new HoaDon
+                {
+                    MaHD = hoaDon.MaHD,
+                    LoaiHD = hoaDon.LoaiHD,
+                    MADT = hoaDon.MADT,
+                    TinhTrang = hoaDon.TinhTrang,
+                    TienTra = hoaDon.TienTra,
+                    TenTK_NV = hoaDon.TenTK_NV,
+                    NgayTao = DateTime.Now
+                };
+                db.HoaDons.Add(newHD);
                 db.SaveChanges();
-                return RedirectToAction("Index");
             }
 
             ViewBag.MADT = new SelectList(db.DoiTacs, "MaDT", "MaSoThue", hoaDon.MADT);

@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
   }
 
-<h2>Danh Mục Hàng Hóa/h2>
+<h2>Index</h2>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -12,10 +12,13 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model=>model.MaHH)
+            @Html.DisplayNameFor(model => model.TenHH)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.TenHH)
+            @Html.DisplayNameFor(model => model.LoaiHang.TenLH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NhomHang.TenNH)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.GiaBan)
@@ -23,38 +26,39 @@
         <th>
             @Html.DisplayNameFor(model => model.GiaNhap)
         </th>
-
-        <th>
-            @Html.DisplayNameFor(model => model.DinhMuc)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.TrinhTrang)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DinhMuc)
         </th>
         <th></th>
     </tr>
 
 @foreach (var item in Model) {
     <tr>
-<td>
-    @Html.DisplayFor(modelItem=>item.MaHH)
-</td>
         <td>
             @Html.DisplayFor(modelItem => item.TenHH)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.SoLuong)
+            @Html.DisplayFor(modelItem => item.LoaiHang.TenLH)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NhomHang.TenNH)
+        </td>
+      
+        
+        <td>
             @Html.DisplayFor(modelItem => item.GiaBan)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.GiaNhap)
         </td>
-
-        <td>
-            @Html.DisplayFor(modelItem => item.DinhMuc)
-        </td>
         <td>
             @Html.DisplayFor(modelItem => item.TrinhTrang)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DinhMuc)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.MaHH }) |
