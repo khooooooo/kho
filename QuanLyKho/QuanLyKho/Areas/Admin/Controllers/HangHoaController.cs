@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using QuanLyKho.Models.Entities;
+using QuanLyKho.Models.Model;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
@@ -131,6 +132,13 @@ namespace QuanLyKho.Areas.Admin.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        [ChildActionOnly]
+        public ActionResult _NhomHang()
+        {
+            var menu = new LeftMenu().list(); ;
+
+            return PartialView(menu);
         }
     }
 }

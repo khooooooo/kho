@@ -130,6 +130,7 @@
     <Content Include="Areas\Admin\Views\HangHoa\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Index.cshtml" />
     <Content Include="Areas\Sale\Views\Sale\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_NhomHang.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -166,6 +167,7 @@
     <Compile Include="Models\Entities\PhanQuyen.cs" />
     <Compile Include="Models\Entities\PhieuThuChi.cs" />
     <Compile Include="Models\Entities\sysdiagram.cs" />
+    <Compile Include="Models\Model\LeftMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -84,33 +84,41 @@
                 <div id="navbar" class="navbar-collapse collapse col-md-6 col-md-offset-3">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Tổng Quan </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                           Tổng quan </a>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Hàng Hóa </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                              Hàng hóa
+                            </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Danh mục</a></li>
+                                <li>@Html.ActionLink("Danh mục","Index","HangHoa",new  { area="Admin"},null)</li>
                                 <li><a href="#">Thiết lập giá</a></li>
                                 <li><a href="#">Tồn kho</a></li>
                                 <li><a href="#">Kiểm Kho</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Giao Dịch </a>
+                           @Html.ActionLink("Giao Dịch","Index","GiaoDich", new { area = "Admin" }, null)
+                             
+                            </a>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Đối tác </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                            Đối tác </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Nhà cung cấp</a></li>
                                 <li><a href="#">Khách Hàng</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sổ quỹ</a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                          Sổ quỹ</a>
 
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Báo Cáo </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                           Báo Cáo  </a>
                             <ul class="dropdown-menu">
                                 <li><a href="#">Báo cáo bán hàng</a></li>
                                 <li><a href="#">Báo cáo tài chính</a></li>
@@ -119,7 +127,9 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Công nợ </a>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                              Công nợ
+                            </a>
                         </li>
                     </ul>
 

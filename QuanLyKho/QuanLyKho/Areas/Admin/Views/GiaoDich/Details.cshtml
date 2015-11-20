@@ -64,3 +64,42 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.MaHD }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+@section GiaoDich{
+    <div style="padding:10px;">
+        <h3><small>Tìm kiếm</small></h3>
+        <input type="text" class="form-control" value="mã hàng, tên hàng" />
+        <input type="text" class="form-control" value="mã hóa đơn" />
+        <input type="text" class="form-control" value=" mã KH hoắc tên KH" />
+        <input type="text" class="form-control" value="theo người tạo" />
+        <h3><small>Lọc theo trạng thái</small></h3>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Đã hoàn thành
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Đã hủy
+        </label><br />
+        <h3><small>Loại Hóa Đơn</small></h3>
+        <input type="radio" name="loaihoadon" value="nhap" />Hóa đơn nhập
+        <br />
+        <input type="radio" name="loaihoadon" value="xuat" />Hóa đơn xuất
+        <br />
+        <h3><small>Lọc theo thời gian</small></h3>
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Toàn thời gian
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Hôm nay
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tuần này
+        </label><br />
+        <label class="radio-inline">
+            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tháng này
+        </label><br />
+        <h3><small>Từ: </small></h3><input type="date" value="2014-01-02" />
+
+        <h3><small>Đến:</small> </h3><input type="date" value="2014-01-02" />
+
+    </div>
+
+}

@@ -64,3 +64,17 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.MaDT }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+@section DoiTac{
+    <div style="padding:10px;">
+        <section>
+            <h3>Giao Dịch</h3>
+        </section>
+        <section>
+            <input type="radio" checked="checked" name="time" value="thang" />Tháng này
+            <br /><br /><br />
+            <input type="radio" name="time" value="nam" /> Năm này
+            <br /><br /><br />
+            <input type="radio" name="time" value="all" />Toàn thời gian
+        </section>
+    </div>
+}
