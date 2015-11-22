@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\ASP.NET\ASPNETMVC\Intern Project\Publish</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="Areas/Admin/Views/DoiTac/Create.cshtml">
+      <publishTime>11/19/2015 14:01:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DoiTac/Delete.cshtml">
+      <publishTime>11/19/2015 14:01:04</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DoiTac/Details.cshtml">
+      <publishTime>11/20/2015 09:03:28</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DoiTac/Edit.cshtml">
+      <publishTime>11/19/2015 14:01:05</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/DoiTac/Index.cshtml">
+      <publishTime>11/20/2015 10:19:41</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GiaoDich/Create.cshtml">
+      <publishTime>11/20/2015 15:03:43</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GiaoDich/Delete.cshtml">
+      <publishTime>11/19/2015 14:05:08</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GiaoDich/Details.cshtml">
+      <publishTime>11/20/2015 09:19:26</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GiaoDich/Edit.cshtml">
+      <publishTime>11/19/2015 14:05:08</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/GiaoDich/Index.cshtml">
+      <publishTime>11/20/2015 09:19:31</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HangHoa/Create.cshtml">
+      <publishTime>11/19/2015 14:06:47</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HangHoa/Delete.cshtml">
+      <publishTime>11/19/2015 14:06:47</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HangHoa/Details.cshtml">
+      <publishTime>11/20/2015 10:11:52</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HangHoa/Edit.cshtml">
+      <publishTime>11/19/2015 14:06:48</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/HangHoa/Index.cshtml">
+      <publishTime>11/20/2015 14:49:29</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Home/Index.cshtml">
+      <publishTime>11/20/2015 16:36:13</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_Layout.cshtml">
+      <publishTime>11/20/2015 16:16:58</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/Shared/_NhomHang.cshtml">
+      <publishTime>11/20/2015 11:28:11</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/web.config">
+      <publishTime>11/20/2015 22:17:20</publishTime>
+    </File>
+    <File Include="Areas/Admin/Views/_ViewStart.cshtml">
+      <publishTime>11/19/2015 13:45:21</publishTime>
+    </File>
+    <File Include="Areas/Main/Views/Home/Index.cshtml">
+      <publishTime>11/19/2015 13:55:32</publishTime>
+    </File>
+    <File Include="Areas/Main/Views/Shared/_Layout.cshtml">
+      <publishTime>11/19/2015 13:45:21</publishTime>
+    </File>
+    <File Include="Areas/Main/Views/View.cshtml">
+      <publishTime>11/19/2015 13:44:14</publishTime>
+    </File>
+    <File Include="Areas/Main/Views/web.config">
+      <publishTime>11/20/2015 22:17:20</publishTime>
+    </File>
+    <File Include="Areas/Main/Views/_ViewStart.cshtml">
+      <publishTime>11/19/2015 13:44:12</publishTime>
+    </File>
+    <File Include="Areas/Sale/Views/index.cshtml">
+      <publishTime>11/19/2015 13:46:07</publishTime>
+    </File>
+    <File Include="Areas/Sale/Views/Sale/Index.cshtml">
+      <publishTime>11/19/2015 14:15:07</publishTime>
+    </File>
+    <File Include="Areas/Sale/Views/Shared/_Layout.cshtml">
+      <publishTime>11/19/2015 13:46:41</publishTime>
+    </File>
+    <File Include="Areas/Sale/Views/web.config">
+      <publishTime>11/20/2015 22:17:20</publishTime>
+    </File>
+    <File Include="Areas/Sale/Views/_ViewStart.cshtml">
+      <publishTime>11/19/2015 13:46:07</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>11/19/2015 13:38:25</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>11/19/2015 13:38:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/QuanLyKho.dll">
+      <publishTime>11/20/2015 16:36:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>11/19/2015 13:36:16</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Deployment.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="bin/System.Web.Webpages.Razor.dll">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>11/19/2015 13:44:13</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/19/2015 13:36:15</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/19/2015 13:44:22</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.min.css">
+      <publishTime>11/19/2015 15:49:58</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap-datetimepicker.min.js">
+      <publishTime>11/19/2015 15:49:42</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>11/19/2015 13:44:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>11/19/2015 13:44:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>11/19/2015 13:44:20</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>11/19/2015 13:44:20</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>11/19/2015 13:44:22</publishTime>
+    </File>
+    <File Include="Views/web.config">
+      <publishTime>11/20/2015 22:17:20</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>11/20/2015 16:46:23</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -109,27 +109,3 @@ E:\DoAnThucTap\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.xml
 E:\DoAnThucTap\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
 E:\DoAnThucTap\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.dll
 E:\DoAnThucTap\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.AspNet.Identity.Core.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.AspNet.Identity.EntityFramework.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.AspNet.Identity.Owin.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Host.SystemWeb.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Security.Cookies.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Security.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Security.OAuth.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Owin.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.AspNet.Identity.Core.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.AspNet.Identity.EntityFramework.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.AspNet.Identity.Owin.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Host.SystemWeb.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Security.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Security.Cookies.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Owin.Security.OAuth.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Antlr3.Runtime.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Optimization.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\WebGrease.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Antlr3.Runtime.pdb
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Optimization.xml
