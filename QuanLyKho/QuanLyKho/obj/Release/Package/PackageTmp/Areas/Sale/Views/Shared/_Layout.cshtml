@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Shop Homepage - Start Bootstrap Template</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Assets/Sale/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="~/Assets/Sale/css/shop-homepage.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script type="text/javascript" src="~/Assets/Sale/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            // ẩn tất cả các thẻ div với class="tab_content".
+            $(".tab_content").hide();
+            // Mặc định nội dung thẻ tab đầu tiên sẽ được hiển thị
+            $(".tab_content:first").show();
+
+            $("ul.tabs li").click(function () {
+                // gỡ bỏ class="active" cho tất cả các thẻ <li>
+                $("ul.tabs li").removeClass("active");
+                // chèn class="active" vào phần tử <li> vừa được click
+                $(this).addClass("active");
+                // ẩn tất cả thẻ <div> với class="tab_content"
+                $(".tab_content").hide();
+                //Hiển thị nội dung thẻ tab được click với hiệu ứng Fade In
+                var activeTab = $(this).attr("rel");
+                $("#" + activeTab).fadeIn();
+            });
+        });
+
+    </script>
+
+    <style type="text/css">
+        ul.tabs {
+            margin: 0;
+            padding: 0;
+            float: left;
+            list-style: none;
+            height: 32px;
+            border-bottom: 1px solid #999999;
+            border-left: 1px solid #999999;
+            width: 100%;
+        }
+
+
+            ul.tabs li {
+                float: left;
+                margin: 0;
+                cursor: pointer;
+                padding: 0px 21px;
+                height: 31px;
+                line-height: 31px;
+                border: 1px solid #999999;
+                border-left: none;
+                font-weight: bold;
+                background: #EEEEEE;
+                overflow: hidden;
+                position: relative;
+            }
+
+
+
+                ul.tabs li:hover {
+                    background: #CCCCCC;
+                }
+
+                ul.tabs li.active {
+                    background: #FFFFFF;
+                    border-bottom: 1px solid #FFFFFF;
+                }
+
+        .tab_container {
+            border: 1px solid #999999;
+            border-top: none;
+            clear: both;
+            float: left;
+            width: 100%;
+            background: #CCCCCC;
+        }
+
+        .tab_content {
+            padding: 20px;
+            font-size: 1.2em;
+            display: none;
+        }
+
+        #container {
+            width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Start Bootstrap</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Services</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+    <!-- Page Content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="row carousel-holder">
+                    <div class="col-md-3 col-md-offset-3 input-group">
+                        <input type="text" class="form-control" value="Tìm kiếm mặt hàng" />
+                        <span class="input-group-addon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                    </div>
+                    @RenderBody()
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="~/Assets/Sale/image/but_chi.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$24.99</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="~/Assets/Sale/image/chan_vay.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$64.99</h4>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="~/Assets/Sale/image/chan_vay_but_chi.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$74.99</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="~/Assets/Sale/image/chan_vay_dap.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$84.99</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <div class="thumbnail">
+                            <img src="~/Assets/Sale/image/zalora-9955-140263-1.jpg" alt="">
+                            <div class="caption">
+                                <h4 class="pull-right">$94.99</h4>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-lg-4 col-md-4">
+                        <h4>
+                            <a href="#">Like this template?</a>
+                        </h4>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+
+                <ul class="tabs">
+                    <li class="active" rel="tab1"> Thông tin</li>
+                    <li rel="tab2"> Mở rộng</li>
+                    <li rel="tab3"> Ghi chú</li>
+                </ul>
+
+                <div class="tab_container">
+
+                    <div id="tab1" class="tab_content">
+
+                        <h3><small>Khách hàng</small></h3>
+
+                        <input type="text" class="form-control" value="Tìm kiếm mặt hàng" />
+
+                        <h3><small>Khách lẻ</small></h3>
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                Loại bảng giá
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li><a href="#">Bảng giá chung</a></li>
+                                <li><a href="#"> </a></li>
+                                <li><a href="#"> </a></li>
+                                <li><a href="#"> </a></li>
+                            </ul>
+                        </div>
+
+                    </div><!-- #tab1 -->
+
+                    <div id="tab2" class="tab_content">
+
+                        <p>
+                            <img src="images/mortal combat.jpg"> <br />
+                            <strong>
+                                Mortal Kombat returns after a lengthy hiatus and puts players
+                                back into the Tournament for 2D fighting with gruesome combat.
+                            </strong>
+                        </p>
+
+                    </div><!-- #tab2 -->
+
+                    <div id="tab3" class="tab_content">
+
+                        <p>
+                            <img src="images/halo.jpg"> <br />
+                            <strong>
+                                Halo: Reach is the culmination of the superlative combat, sensational
+                                multiplayer, and seamless online integration that are the hallmarks
+                                of this superb series.
+                            </strong>
+                        </p>
+
+                    </div><!-- #tab3 -->
+
+
+                </div> <!-- .tab_container -->
+                <div id="container">
+                    <ul class="tabs">
+                        <li class="active" rel="tab4"> Call of Duty</li>
+
+                    </ul>
+
+                    <div class="tab_container">
+
+                        <div id="tab4" class="tab_content2">
+                            <h3><small>Tổng tiền</small></h3>
+                            <h5> 0 </h5>
+
+                            <h3 class="col-md-9"><small>Giảm giá</small></h3>
+
+                            <input type="text" class="form-control" />
+                            <h3><small>Thanh toán</small></h3>
+                            <h5> 0 </h5>
+                            <button btn btn-default" type="submit">Thanh toán</button>
+                            <button btn btn-default" type="submit">Hủy</button>
+
+                        </div><!-- #tab4 -->
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- /.container-fluid-->
+        <div class="container-fluid">
+            <hr>
+            <!-- Footer -->
+
+        </div>
+        <!-- /.container -->
+        <!-- jQuery -->
+        <!-- /.container -->
+        <!-- jQuery -->
+        <script src="~/Assets/Sale/js/jquery.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="~/Assets/Sale/js/bootstrap.min.js"></script>
+</body>
+</html>

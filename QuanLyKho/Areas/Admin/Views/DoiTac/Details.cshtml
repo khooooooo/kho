@@ -1,0 +1,80 @@
+﻿@model QuanLyKho.Models.Entities.DoiTac
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DoiTac</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.MaSoThue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaSoThue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Email)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DiaChi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KieuDT)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KieuDT)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaDT }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+@section DoiTac{
+    <div style="padding:10px;">
+        <section>
+            <h3>Giao Dịch</h3>
+        </section>
+        <section>
+            <input type="radio" checked="checked" name="time" value="thang" />Tháng này
+            <br /><br /><br />
+            <input type="radio" name="time" value="nam" /> Năm này
+            <br /><br /><br />
+            <input type="radio" name="time" value="all" />Toàn thời gian
+        </section>
+    </div>
+}

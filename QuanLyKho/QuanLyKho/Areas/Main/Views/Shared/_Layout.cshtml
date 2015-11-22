@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Grayscale - Start Bootstrap Theme</title>
-    <!-- Bootstrap Core CSS -->
+    <title>Quản Lý Kho Hàng</title>
+       <!-- Bootstrap Core CSS -->
     <link href="~/Assets/Main/css/bootstrap.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="~/Assets/Main/css/grayscale.css" rel="stylesheet">
@@ -31,7 +31,7 @@
                     <i class="fa fa-bars"></i>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
+                    <i class="fa fa-play-circle"></i>  <span class="light">Quản Lý</span> Kho Hàng
                 </a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -42,19 +42,23 @@
                         <a href="#page-top"></a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#">About</a>
+                        <a class="page-scroll" href="#about">About</a>
                     </li>
+                   
                     <li>
-                        <a class="page-scroll" href="#">Download</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#">Contact</a>
+                        <a class="page-scroll" href="#contact">Contact</a>
                     </li>
                     <li>
                         @Html.ActionLink("Sale", "Index", "Sale", new { area = "Sale" }, null)
                     </li>
                     <li>
                         @Html.ActionLink("Admin", "Index", "Doitac", new { area = "Admin" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đăng Nhập", "", "", new { area = "Main" }, null)
+                    </li>
+                    <li>
+                        @Html.ActionLink("Đăng Ký", "", "", new { area = "Main" }, null)
                     </li>
                 </ul>
             </div>
@@ -68,19 +72,38 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <h1 class="brand-heading">Grayscale</h1>
-                        <p class="intro-text">A free, responsive, one page Bootstrap theme.<br>Created by Start Bootstrap.</p>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                        <h1 class="brand-heading">ABCDEFF</h1>
+                       
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
     @RenderBody()
-    <!-- Map Section -->
+   
+    <!--About Session-->
+    <section id="about" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Quản Lý Kho Hàng</h2>
+               
+            </div>
+        </div>
+    </section>
+    <!-- contact Section -->
+    <section id="contact" class="container content-section text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Contact</h2>
+                <p>Name: Phạm Thị Mai Phương - Email: ptmphuong0212@gmail.com</p>
+                <p>Name: Nguyễn Đức Đồng - Email: </p>
+               
+            </div>
+        </div>
+    </section>
     <div id="map"></div>
+   
     <!-- Footer -->
     <!-- jQuery -->
     <script src="~/Assets/Main/js/jquery.js"></script>
