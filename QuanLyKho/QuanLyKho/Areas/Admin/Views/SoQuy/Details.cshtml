@@ -1,0 +1,58 @@
+﻿@model QuanLyKho.Models.Entities.PhieuThuChi
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PhieuThuChi</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DoiTac.MaSoThue)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DoiTac.MaSoThue)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoaDon.TenTK_NV)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoaDon.TenTK_NV)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoaiPhieu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoaiPhieu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Thoigian)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Thoigian)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GiaTri)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GiaTri)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MaPH }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

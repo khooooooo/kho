@@ -6,7 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
-namespace QuanLyKho.Areas.Admin.Controllers
+namespace QuanLyKho.Areas.Main.Controllers
 {
     public class AccountController : Controller
     {

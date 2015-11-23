@@ -54,7 +54,7 @@
                     </a>
                     <ul class="dropdown-menu dropdown-user">
                         <li>
-                            <a href="#">Quản Lí Người Dùng</a>
+                            @Html.ActionLink("Quản lý người dùng","index","nhanvien",new { area="Admin"},null)
                         </li>
                         <li>
                             <a href="#">Thông tin cửa hàng</a>
@@ -84,7 +84,7 @@
                 <div id="navbar" class="navbar-collapse collapse col-md-6 col-md-offset-3">
                     <ul class="nav navbar-nav">
                         <li>
-                            @Html.ActionLink("Tổng quan", "Index","Home")
+                            @Html.ActionLink("Tổng quan", "Index","TongQuan")
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -92,9 +92,8 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li>@Html.ActionLink("Danh mục","Index","HangHoa",new  { area="Admin"},null)</li>
-                                <li><a href="#">Thiết lập giá</a></li>
-                                <li><a href="#">Tồn kho</a></li>
-                                <li><a href="#">Kiểm Kho</a></li>
+                                <li>@Html.ActionLink("Tồn kho", "Index", "TonKho", new { area = "Admin" }, null)</li>
+                                <li>@Html.ActionLink("Kiểm kho", "Index", "HangHoa", new { area = "Admin" }, null)</li>
                             </ul>
                         </li>
                         <li>
@@ -106,14 +105,12 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                             Đối tác </a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Nhà cung cấp</a></li>
-                                <li><a href="#">Khách Hàng</a></li>
+                                <li>@Html.ActionLink("Nhà cung cấp", "Index","NCC", new {area = "Admin" },null)</li>
+                                <li>@Html.ActionLink("KH", "Index", "KH", new { area = "Admin" }, null)</li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                          Sổ quỹ</a>
-
+                            @Html.ActionLink("Sổ quỹ", "Index", "SoQuy", new { area = "Admin" }, null)
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -126,9 +123,7 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-                              Công nợ
-                            </a>
+                           @Html.ActionLink("Công nợ", "Index", "CongNo", new { area = "Admin" }, null)
                         </li>
                     </ul>
 
@@ -157,11 +152,13 @@
     <script src="~/Assets/Admin/bower_components/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="~/Assets/Admin/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    
     <!-- Metis Menu Plugin JavaScript -->
     <script src="~/Assets/Admin/bower_components/metisMenu/dist/metisMenu.min.js"></script>
     <!-- Morris Charts JavaScript -->
     <script src="~/Assets/Admin/bower_components/raphael/raphael-min.js"></script>
-   
+
+    
     <!-- Custom Theme JavaScript -->
     <script src="~/Assets/Admin/dist/js/sb-admin-2.js"></script>
 

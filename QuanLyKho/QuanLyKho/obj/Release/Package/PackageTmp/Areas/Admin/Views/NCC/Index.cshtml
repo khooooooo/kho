@@ -1,0 +1,77 @@
+﻿@model IEnumerable<QuanLyKho.Models.Entities.DoiTac>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.MaSoThue)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SDT)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DiaChi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KieuDT)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaSoThue)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SDT)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DiaChi)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KieuDT)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MaDT }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MaDT }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MaDT })
+        </td>
+    </tr>
+}
+
+</table>
+@section DoiTac{
+    <div style="padding:10px;">
+        <section>
+            <h3>Giao Dịch</h3>
+        </section>
+        <section>
+            <input type="radio" checked="checked" name="time" value="thang" />Tháng này
+            <br /><br /><br />
+            <input type="radio" name="time" value="nam" /> Năm này
+            <br /><br /><br />
+            <input type="radio" name="time" value="all" />Toàn thời gian
+        </section>
+    </div>
+}

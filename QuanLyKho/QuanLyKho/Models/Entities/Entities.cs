@@ -19,6 +19,7 @@ namespace QuanLyKho.Models.Entities
         public virtual DbSet<CuaHang> CuaHangs { get; set; }
         public virtual DbSet<DoiTac> DoiTacs { get; set; }
         public virtual DbSet<HangHoa> HangHoas { get; set; }
+        public virtual DbSet<HinhAnh> HinhAnhs { get; set; }
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhoHang> KhoHangs { get; set; }
         public virtual DbSet<LoaiHang> LoaiHangs { get; set; }
@@ -88,6 +89,12 @@ namespace QuanLyKho.Models.Entities
                 .HasMany(e => e.CongNoes)
                 .WithRequired(e => e.HoaDon)
                 .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<HangHoa>()
+                  .HasMany(e => e.HinhAnhs)
+                  .WithRequired(e => e.HangHoa)
+                  .WillCascadeOnDelete(false);
+                
 
             modelBuilder.Entity<HoaDon>()
                 .HasMany(e => e.CT_HoaDon)

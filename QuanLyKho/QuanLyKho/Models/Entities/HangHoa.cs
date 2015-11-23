@@ -63,5 +63,7 @@ namespace QuanLyKho.Models.Entities
         public virtual LoaiHang LoaiHang { get; set; }
 
         public virtual NhomHang NhomHang { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<HinhAnh> HinhAnhs { get; set; }
     }
 }

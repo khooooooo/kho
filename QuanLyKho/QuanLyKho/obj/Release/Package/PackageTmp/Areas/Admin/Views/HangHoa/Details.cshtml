@@ -120,38 +120,3 @@
     @Html.ActionLink("Edit", "Edit", new { id = Model.MaHH }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
-@section HangHoa{
-    <div style="padding:10px;">
-        <h3><small>Tìm kiếm</small></h3>
-        <input type="text" class="form-control" value="Tìm kiếm mặt hàng" />
-        <h3><small>Loại hàng</small></h3>
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1"> Combo - đóng gói
-        </label><br />
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1"> Dịch vụ
-        </label><br />
-        <label class="checkbox-inline">
-            <input type="checkbox" id="inlineCheckbox1" value="option1"> Hàng hóa
-        </label><br />
-        <h3><small>Lọc theo thời gian</small></h3>
-        <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Hôm nay
-        </label><br />
-        <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tuần này
-        </label><br />
-        <label class="radio-inline">
-            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> Tháng này
-        </label><br />
-
-
-     
-        <h3><small>Từ: </small></h3><input type="date" value="2014-01-02" />
-
-        <h3><small>Đến:</small> </h3><input type="date" value="2014-01-02" />
-
-
-    </div>
-
-}

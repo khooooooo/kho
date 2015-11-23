@@ -99,6 +99,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Admin\js\flot-data.js" />
+    <Content Include="Assets\Admin\js\jquery.ajaxfileupload.js" />
+    <Content Include="Assets\Admin\js\morris-data.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -113,25 +116,54 @@
     <Content Include="Areas\Sale\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Sale\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Sale\Views\index.cshtml" />
-    <Content Include="Areas\Main\Views\Home\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\DoiTac\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\DoiTac\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\DoiTac\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\DoiTac\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\DoiTac\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\NCC\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NCC\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NCC\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NCC\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NCC\Index.cshtml" />
     <Content Include="Areas\Admin\Views\GiaoDich\Create.cshtml" />
     <Content Include="Areas\Admin\Views\GiaoDich\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\GiaoDich\Details.cshtml" />
     <Content Include="Areas\Admin\Views\GiaoDich\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\GiaoDich\Index.cshtml" />
+    <Content Include="Areas\Sale\Views\Sale\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Shared\_NhomHang.cshtml" />
+    <Content Include="Areas\Admin\Views\TongQuan\Index.cshtml" />
+    <Content Include="Areas\Main\Views\Account\Index.cshtml" />
+    <Content Include="Areas\Main\Views\Account\Login.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NhanVien\Index.cshtml" />
+    <Content Include="Areas\Main\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\KH\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\KH\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\KH\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\KH\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\KH\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\SoQuy\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\SoQuy\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\SoQuy\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\SoQuy\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\SoQuy\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\CongNo\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CongNo\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CongNo\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\CongNo\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CongNo\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\TonKho\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\TonKho\Index.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Create.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Details.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Index.cshtml" />
-    <Content Include="Areas\Sale\Views\Sale\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Shared\_NhomHang.cshtml" />
-    <Content Include="Areas\Admin\Views\TongQuan\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\HinhAnh\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\HinhAnh\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\HinhAnh\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\HinhAnh\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\HinhAnh\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -141,10 +173,22 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
-    <Compile Include="Areas\Admin\Controllers\DoiTacController.cs" />
-    <Compile Include="Areas\Admin\Controllers\GiaoDichController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CongNoController.cs" />
     <Compile Include="Areas\Admin\Controllers\HangHoaController.cs" />
+    <Compile Include="Areas\Admin\Controllers\HinhAnhController.cs" />
+    <Compile Include="Areas\Admin\Controllers\KHController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SoQuyController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TonKhoController.cs" />
+    <Compile Include="Areas\Admin\Models\Picture.cs" />
+    <Compile Include="Areas\Main\Controllers\AccountController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NCCController.cs" />
+    <Compile Include="Areas\Admin\Controllers\GiaoDichController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\TongQuanController.cs" />
+    <Compile Include="Areas\Admin\Models\LoginViewModel.cs" />
+    <Compile Include="Areas\Common\Common.cs" />
+    <Compile Include="Areas\Common\KhoDb.cs" />
+    <Compile Include="Areas\Common\UserLogin.cs" />
     <Compile Include="Areas\Main\Controllers\HomeController.cs" />
     <Compile Include="Areas\Main\MainAreaRegistration.cs" />
     <Compile Include="Areas\Sale\Controllers\SaleController.cs" />
@@ -160,6 +204,7 @@
     <Compile Include="Models\Entities\DoiTac.cs" />
     <Compile Include="Models\Entities\Entities.cs" />
     <Compile Include="Models\Entities\HangHoa.cs" />
+    <Compile Include="Models\Entities\HinhAnh.cs" />
     <Compile Include="Models\Entities\HoaDon.cs" />
     <Compile Include="Models\Entities\KhoHang.cs" />
     <Compile Include="Models\Entities\LoaiHang.cs" />
@@ -194,13 +239,11 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Main\Models\" />
     <Folder Include="Areas\Sale\Models\" />
     <Folder Include="Assets\Admin\bower_components\" />
     <Folder Include="Assets\Admin\DateTime\" />
     <Folder Include="Assets\Admin\dist\" />
-    <Folder Include="Assets\Admin\js\" />
     <Folder Include="Assets\Admin\less\" />
     <Folder Include="Assets\Main\css\" />
     <Folder Include="Assets\Main\font-awesome\" />
@@ -212,6 +255,8 @@
     <Folder Include="Assets\Sale\fonts\" />
     <Folder Include="Assets\Sale\image\" />
     <Folder Include="Assets\Sale\js\" />
+    <Folder Include="Content\image\" />
+    <Folder Include="File\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

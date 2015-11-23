@@ -2,7 +2,8 @@
 
 @{
     ViewBag.Title = "Index";
-  }
+ 
+}
 
 <h2>Index</h2>
 
@@ -12,13 +13,34 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.TenHH)
+            
         </th>
         <th>
             @Html.DisplayNameFor(model => model.LoaiHang.TenLH)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.NhomHang.TenNH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TenHH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SoLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KichThuoc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KhoiLuong)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NgaySX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HanSD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoSX)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.GiaBan)
@@ -35,38 +57,59 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.TenHH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoaiHang.TenLH)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NhomHang.TenNH)
-        </td>
-      
-        
-        <td>
-            @Html.DisplayFor(modelItem => item.GiaBan)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.GiaNhap)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.TrinhTrang)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DinhMuc)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MaHH }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MaHH }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MaHH })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+               
+                   @Html.ActionLink("Upload ảnh", "Upload","HinhAnh", new { area = "Admin" })
+           </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoaiHang.TenLH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NhomHang.TenNH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TenHH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SoLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KichThuoc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KhoiLuong)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NgaySX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HanSD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoSX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaBan)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GiaNhap)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrinhTrang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DinhMuc)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.MaHH }) |
+                @Html.ActionLink("Details", "Details", new { id = item.MaHH }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.MaHH })
+            </td>
+        </tr>
+    }
 
 </table>
 @section HangHoa{
@@ -95,12 +138,12 @@
         </label><br />
 
         <h3><small>Nhóm hàng</small></h3>
-           @{Html.RenderAction("_NhomHang","HangHoa");}
-            <h3><small>Từ: </small></h3><input type="date" value="2014-01-02" />
-       
-            <h3><small>Đến:</small> </h3><input type="date" value="2014-01-02" />
-      
-      
+        @{Html.RenderAction("_NhomHang", "HangHoa");}
+        <h3><small>Từ: </small></h3><input type="date" value="2014-01-02" />
+
+        <h3><small>Đến:</small> </h3><input type="date" value="2014-01-02" />
+
+
     </div>
 
 }
