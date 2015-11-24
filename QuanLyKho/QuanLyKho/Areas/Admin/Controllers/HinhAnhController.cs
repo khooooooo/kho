@@ -12,8 +12,10 @@ using QuanLyKho.Areas.Admin.Models;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
-    public class HinhAnhController : Controller
+    public class HinhAnhController : BaseController
     {
+        string fileName;
+        string path;
         private Entities db = new Entities();
 
         // GET: Admin/HinhAnh
@@ -22,21 +24,36 @@ namespace QuanLyKho.Areas.Admin.Controllers
             var hinhAnhs = db.HinhAnhs.Include(h => h.HangHoa);
             return View(hinhAnhs.ToList());
         }
-
+        
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Index(Picture ptr,HttpPostedFileBase file)
+        public ActionResult Index(HinhAnh hinhAnh, HttpPostedFileBase file)
         {
-            if (file.ContentLength>0)
+            if (file.ContentLength > 0)
             {
-                var fileName = Path.GetFileName(file.FileName);
-                var path = Path.Combine(Server.MapPath("~/Content/Image"), fileName);
+                fileName = Path.GetFileName(file.FileName);
+                 path = Path.Combine(Server.MapPath("~/Content/Image"), fileName);
                 file.SaveAs(path);
+                if (ModelState.IsValid)
+                {
+                    var result = db.HinhAnhs.Count();
+                    HinhAnh img = new HinhAnh
+                    {
+                        MaHH = hinhAnh.MaHH,
+                        MaIMG = "HA000" + result,
+                        TenIMG = fileName,
+                        PathFile = path
+                    };
+                    db.HinhAnhs.Add(img);
+                    db.SaveChanges();
+                    return RedirectToAction("Index");
+                }
+              
             }
-            return RedirectToAction("Index");
+            return View();
         }
 
-        // GET: Admin/HinhAnh/Details/5
+       // GET: Admin/HinhAnh/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)

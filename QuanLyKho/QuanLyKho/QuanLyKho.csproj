@@ -105,7 +105,6 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
-    <Content Include="Models\fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.css" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.js" />
@@ -159,11 +158,11 @@
     <Content Include="Areas\Admin\Views\HangHoa\Details.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\HangHoa\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\HinhAnh\Create.cshtml" />
     <Content Include="Areas\Admin\Views\HinhAnh\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\HinhAnh\Details.cshtml" />
     <Content Include="Areas\Admin\Views\HinhAnh\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\HinhAnh\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\HinhAnh\Create.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -173,24 +172,26 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\Admin\Controllers\CongNoController.cs" />
     <Compile Include="Areas\Admin\Controllers\HangHoaController.cs" />
     <Compile Include="Areas\Admin\Controllers\HinhAnhController.cs" />
     <Compile Include="Areas\Admin\Controllers\KHController.cs" />
     <Compile Include="Areas\Admin\Controllers\SoQuyController.cs" />
+    <Compile Include="Areas\Admin\Controllers\TongQuanController.cs" />
     <Compile Include="Areas\Admin\Controllers\TonKhoController.cs" />
     <Compile Include="Areas\Admin\Models\Picture.cs" />
     <Compile Include="Areas\Main\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\NCCController.cs" />
     <Compile Include="Areas\Admin\Controllers\GiaoDichController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
-    <Compile Include="Areas\Admin\Controllers\TongQuanController.cs" />
-    <Compile Include="Areas\Admin\Models\LoginViewModel.cs" />
+    <Compile Include="Areas\Main\Models\LoginViewModel.cs" />
     <Compile Include="Areas\Common\Common.cs" />
     <Compile Include="Areas\Common\KhoDb.cs" />
     <Compile Include="Areas\Common\UserLogin.cs" />
     <Compile Include="Areas\Main\Controllers\HomeController.cs" />
     <Compile Include="Areas\Main\MainAreaRegistration.cs" />
+    <Compile Include="Areas\Main\Models\Encryptor.cs" />
     <Compile Include="Areas\Sale\Controllers\SaleController.cs" />
     <Compile Include="Areas\Sale\SaleAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
@@ -226,9 +227,6 @@
     <Content Include="Areas\Main\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Main\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Main\Views\View.cshtml" />
-    <Content Include="Models\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Models\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Models\fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -239,7 +237,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Main\Models\" />
+    <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Sale\Models\" />
     <Folder Include="Assets\Admin\bower_components\" />
     <Folder Include="Assets\Admin\DateTime\" />

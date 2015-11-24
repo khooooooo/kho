@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
-    public class TongQuanController : Controller
+    public class TongQuanController : BaseController
     {
-        // GET: Admin/Home
+        // GET: Admin/TongQuan
         public ActionResult Index()
         {
             return View();

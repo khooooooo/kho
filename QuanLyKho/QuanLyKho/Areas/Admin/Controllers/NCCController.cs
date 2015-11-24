@@ -11,7 +11,7 @@ using QuanLyKho.Models.Model;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
-    public class NCCController : Controller
+    public class NCCController : BaseController
     {
         private Entities db = new Entities();
 

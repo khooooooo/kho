@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+           Upload ảnh
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.HangHoa.TenHH)
         </th>
         <th>
@@ -26,14 +29,17 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            <p>files: </p>
+            <input type="file" name="file" id="file">
+            <input type="submit" name="submit" value="Upload" />
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.HangHoa.TenHH)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TenIMG)
+            <img src="@Url.Content(item.PathFile)" />
         </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PathFile)
-        </td>
+       
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.MaIMG }) |
             @Html.ActionLink("Details", "Details", new { id=item.MaIMG }) |

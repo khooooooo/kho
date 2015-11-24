@@ -13,11 +13,21 @@ namespace QuanLyKho.Areas.Common
         {
             return db.NhanViens.FirstOrDefault(c => c.TenTK.Equals(id));
         }
-        public bool Login(string id, string pass)
+        public int Login(string id, string pass)
         {
-            var q = db.NhanViens.Count(c => c.TenTK == id && c.Pwd == pass);
-            if (q >0 ) return true;
-            else return false;
+            var q = db.NhanViens.SingleOrDefault(c => c.TenTK == id);
+            if (q == null )
+            {
+                return 0;
+            }
+            else
+            {
+                if(q.Pwd == pass)
+                {
+                    return 1;
+                }
+                else { return -1; }
+            }
         }
     }
 }

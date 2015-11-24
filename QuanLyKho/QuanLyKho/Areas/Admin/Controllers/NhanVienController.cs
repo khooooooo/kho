@@ -10,7 +10,7 @@ using QuanLyKho.Models.Entities;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
-    public class NhanVienController : Controller
+    public class NhanVienController : BaseController
     {
         private Entities db = new Entities();
 

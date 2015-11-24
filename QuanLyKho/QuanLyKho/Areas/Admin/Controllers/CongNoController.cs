@@ -10,7 +10,7 @@ using QuanLyKho.Models.Entities;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
-    public class CongNoController : Controller
+    public class CongNoController : BaseController
     {
         private Entities db = new Entities();
 
