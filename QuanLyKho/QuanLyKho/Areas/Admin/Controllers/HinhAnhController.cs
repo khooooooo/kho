@@ -9,6 +9,7 @@ using System.Web.Mvc;
 using QuanLyKho.Models.Entities;
 using System.IO;
 using QuanLyKho.Areas.Admin.Models;
+using QuanLyKho.Areas.Common;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
@@ -19,6 +20,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         private Entities db = new Entities();
 
         // GET: Admin/HinhAnh
+        [HasCredential(RoleID = "VIEW_HH")]
         public ActionResult Index()
         {
             var hinhAnhs = db.HinhAnhs.Include(h => h.HangHoa);
@@ -27,6 +29,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "VIEW_HH")]
         public ActionResult Index(HinhAnh hinhAnh, HttpPostedFileBase file)
         {
             if (file.ContentLength > 0)
@@ -42,7 +45,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
                         MaHH = hinhAnh.MaHH,
                         MaIMG = "HA000" + result,
                         TenIMG = fileName,
-                        PathFile = path
+                        PathFile = string.Join("/", "~/Content/Image", fileName)
                     };
                     db.HinhAnhs.Add(img);
                     db.SaveChanges();
@@ -53,7 +56,8 @@ namespace QuanLyKho.Areas.Admin.Controllers
             return View();
         }
 
-       // GET: Admin/HinhAnh/Details/5
+        // GET: Admin/HinhAnh/Details/5
+        [HasCredential(RoleID = "VIEW_HH")]
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -69,6 +73,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/HinhAnh/Create
+        [HasCredential(RoleID = "CREATE_HH")]
         public ActionResult Create()
         {
             ViewBag.MaHH = new SelectList(db.HangHoas, "MaHH", "TenHH");
@@ -80,6 +85,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "CREATE_HH")]
         public ActionResult Create([Bind(Include = "MaIMG,TenIMG,MaHH,PathFile")] HinhAnh hinhAnh)
         {
             if (ModelState.IsValid)
@@ -94,6 +100,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/HinhAnh/Edit/5
+        [HasCredential(RoleID = "EDIT_HH")]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -114,6 +121,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "EDIT_HH")]
         public ActionResult Edit([Bind(Include = "MaIMG,TenIMG,MaHH,PathFile")] HinhAnh hinhAnh)
         {
             if (ModelState.IsValid)
@@ -127,6 +135,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/HinhAnh/Delete/5
+        [HasCredential(RoleID = "DEL_HH")]
         public ActionResult Delete(string id)
         {
             if (id == null)

@@ -5,8 +5,10 @@ using System.Web;
 
 namespace QuanLyKho.Areas.Common
 {
+    [Serializable]
     public static class Common
     {
         public static string USER_SESSION = "USER_SESSION";
+        public static string SESSION_CREDENTIAL = "SESSION_CREDENTIAL";
     }
 }

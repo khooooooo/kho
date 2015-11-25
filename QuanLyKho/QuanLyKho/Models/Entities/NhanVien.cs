@@ -17,6 +17,7 @@ namespace QuanLyKho.Models.Entities
 
         [Key]
         [StringLength(50)]
+        [DataType(DataType.Password)]
         public string TenTK { get; set; }
 
         [Required]
@@ -40,7 +41,6 @@ namespace QuanLyKho.Models.Entities
         [StringLength(50)]
         public string Pwd { get; set; }
 
-        [Required]
         [StringLength(50)]
         public string TenTK_Chu { get; set; }
 

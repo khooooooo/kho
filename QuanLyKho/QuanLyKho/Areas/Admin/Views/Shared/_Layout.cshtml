@@ -99,7 +99,7 @@
                         <li>
                            @Html.ActionLink("Giao Dịch","Index","GiaoDich", new { area = "Admin" }, null)
                              
-                            </a>
+                            
                         </li>
                         <li>
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -161,6 +161,6 @@
     
     <!-- Custom Theme JavaScript -->
     <script src="~/Assets/Admin/dist/js/sb-admin-2.js"></script>
-
+    @RenderSection("scripts",false)
 </body>
 </html>

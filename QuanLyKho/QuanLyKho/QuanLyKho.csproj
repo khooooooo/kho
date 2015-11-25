@@ -104,6 +104,7 @@
     <Content Include="Assets\Admin\js\morris-data.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\image\noimage.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
     <Content Include="Scripts\bootstrap-datetimepicker.min.css" />
@@ -114,7 +115,6 @@
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\Sale\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Sale\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Sale\Views\index.cshtml" />
     <Content Include="Areas\Admin\Views\NCC\Create.cshtml" />
     <Content Include="Areas\Admin\Views\NCC\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\NCC\Details.cshtml" />
@@ -163,9 +163,30 @@
     <Content Include="Areas\Admin\Views\HinhAnh\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\HinhAnh\Index.cshtml" />
     <Content Include="Areas\Admin\Views\HinhAnh\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CuaHangs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\CuaHangs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\CuaHangs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\CuaHangs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\CuaHangs\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuCuaHang\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuCuaHang\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuCuaHang\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuCuaHang\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\ChuCuaHang\Index.cshtml" />
+    <Content Include="Areas\SB_Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\NhomHangs\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\NhomHangs\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\NhomHangs\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\NhomHangs\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\NhomHangs\Index.cshtml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -173,14 +194,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\BaseController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ChuCuaHangController.cs" />
     <Compile Include="Areas\Admin\Controllers\CongNoController.cs" />
+    <Compile Include="Areas\Admin\Controllers\CuaHangsController.cs" />
     <Compile Include="Areas\Admin\Controllers\HangHoaController.cs" />
     <Compile Include="Areas\Admin\Controllers\HinhAnhController.cs" />
     <Compile Include="Areas\Admin\Controllers\KHController.cs" />
+    <Compile Include="Areas\Admin\Controllers\NhomHangsController.cs" />
     <Compile Include="Areas\Admin\Controllers\SoQuyController.cs" />
     <Compile Include="Areas\Admin\Controllers\TongQuanController.cs" />
     <Compile Include="Areas\Admin\Controllers\TonKhoController.cs" />
     <Compile Include="Areas\Admin\Models\Picture.cs" />
+    <Compile Include="Areas\Common\HasCredentialAttribute.cs" />
+    <Compile Include="Areas\Common\CommonConstant.cs" />
     <Compile Include="Areas\Main\Controllers\AccountController.cs" />
     <Compile Include="Areas\Admin\Controllers\NCCController.cs" />
     <Compile Include="Areas\Admin\Controllers\GiaoDichController.cs" />
@@ -194,12 +220,14 @@
     <Compile Include="Areas\Main\Models\Encryptor.cs" />
     <Compile Include="Areas\Sale\Controllers\SaleController.cs" />
     <Compile Include="Areas\Sale\SaleAreaRegistration.cs" />
+    <Compile Include="Areas\SB_Admin\SB_AdminAreaRegistration.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Entities\BC_CuoiNgay.cs" />
     <Compile Include="Models\Entities\ChuCuaHang.cs" />
     <Compile Include="Models\Entities\CongNo.cs" />
+    <Compile Include="Models\Entities\Credential.cs" />
     <Compile Include="Models\Entities\CT_HoaDon.cs" />
     <Compile Include="Models\Entities\CuaHang.cs" />
     <Compile Include="Models\Entities\DoiTac.cs" />
@@ -214,6 +242,7 @@
     <Compile Include="Models\Entities\NhomHang.cs" />
     <Compile Include="Models\Entities\PhanQuyen.cs" />
     <Compile Include="Models\Entities\PhieuThuChi.cs" />
+    <Compile Include="Models\Entities\Role.cs" />
     <Compile Include="Models\Entities\sysdiagram.cs" />
     <Compile Include="Models\Model\LeftMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -239,6 +268,9 @@
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Views\Base\" />
     <Folder Include="Areas\Sale\Models\" />
+    <Folder Include="Areas\SB_Admin\Controllers\" />
+    <Folder Include="Areas\SB_Admin\Models\" />
+    <Folder Include="Areas\SB_Admin\Views\Shared\" />
     <Folder Include="Assets\Admin\bower_components\" />
     <Folder Include="Assets\Admin\DateTime\" />
     <Folder Include="Assets\Admin\dist\" />
@@ -253,7 +285,6 @@
     <Folder Include="Assets\Sale\fonts\" />
     <Folder Include="Assets\Sale\image\" />
     <Folder Include="Assets\Sale\js\" />
-    <Folder Include="Content\image\" />
     <Folder Include="File\" />
   </ItemGroup>
   <PropertyGroup>

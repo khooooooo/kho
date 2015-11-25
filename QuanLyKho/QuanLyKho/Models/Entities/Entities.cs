@@ -15,6 +15,7 @@ namespace QuanLyKho.Models.Entities
         public virtual DbSet<BC_CuoiNgay> BC_CuoiNgay { get; set; }
         public virtual DbSet<ChuCuaHang> ChuCuaHangs { get; set; }
         public virtual DbSet<CongNo> CongNoes { get; set; }
+        public virtual DbSet<Credential> Credentials { get; set; }
         public virtual DbSet<CT_HoaDon> CT_HoaDon { get; set; }
         public virtual DbSet<CuaHang> CuaHangs { get; set; }
         public virtual DbSet<DoiTac> DoiTacs { get; set; }
@@ -28,6 +29,7 @@ namespace QuanLyKho.Models.Entities
         public virtual DbSet<NhomHang> NhomHangs { get; set; }
         public virtual DbSet<PhanQuyen> PhanQuyens { get; set; }
         public virtual DbSet<PhieuThuChi> PhieuThuChis { get; set; }
+        public virtual DbSet<Role> Roles { get; set; }
         public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -42,13 +44,16 @@ namespace QuanLyKho.Models.Entities
 
             modelBuilder.Entity<ChuCuaHang>()
                 .HasMany(e => e.NhanViens)
-                .WithRequired(e => e.ChuCuaHang)
-                .HasForeignKey(e => e.TenTK_Chu)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.ChuCuaHang)
+                .HasForeignKey(e => e.TenTK_Chu);
 
             modelBuilder.Entity<CongNo>()
                 .Property(e => e.GiaTri)
                 .HasPrecision(15, 3);
+
+            modelBuilder.Entity<Credential>()
+                .Property(e => e.RoleID)
+                .IsFixedLength();
 
             modelBuilder.Entity<CuaHang>()
                 .HasMany(e => e.ChuCuaHangs)
@@ -85,16 +90,15 @@ namespace QuanLyKho.Models.Entities
                 .WithRequired(e => e.HangHoa)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<HangHoa>()
+                .HasMany(e => e.HinhAnhs)
+                .WithRequired(e => e.HangHoa)
+                .WillCascadeOnDelete(false);
+
             modelBuilder.Entity<HoaDon>()
                 .HasMany(e => e.CongNoes)
                 .WithRequired(e => e.HoaDon)
                 .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<HangHoa>()
-                  .HasMany(e => e.HinhAnhs)
-                  .WithRequired(e => e.HangHoa)
-                  .WillCascadeOnDelete(false);
-                
 
             modelBuilder.Entity<HoaDon>()
                 .HasMany(e => e.CT_HoaDon)

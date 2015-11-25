@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using QuanLyKho.Models.Entities;
+using QuanLyKho.Areas.Common;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
@@ -15,6 +16,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         private Entities db = new Entities();
 
         // GET: Admin/CongNoes
+        [HasCredential(RoleID = "VIEW_CONGNO")]
         public ActionResult Index()
         {
             var congNoes = db.CongNoes.Include(c => c.DoiTac).Include(c => c.HoaDon);
@@ -22,6 +24,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/CongNoes/Details/5
+        [HasCredential(RoleID = "VIEW_CONGNO")]
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -37,6 +40,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/CongNoes/Create
+        [HasCredential(RoleID = "CREATE_CONGNO")]
         public ActionResult Create()
         {
             ViewBag.MaDT = new SelectList(db.DoiTacs, "MaDT", "MaSoThue");
@@ -49,6 +53,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "CREATE_CONGNO")]
         public ActionResult Create([Bind(Include = "MaCN,MaDT,LoaiCN,MaHD,GiaTri")] CongNo congNo)
         {
             if (ModelState.IsValid)
@@ -64,6 +69,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/CongNoes/Edit/5
+        [HasCredential(RoleID = "EDIT_CONGNO")]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -85,6 +91,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "EDIT_CONGNO")]
         public ActionResult Edit([Bind(Include = "MaCN,MaDT,LoaiCN,MaHD,GiaTri")] CongNo congNo)
         {
             if (ModelState.IsValid)
@@ -98,7 +105,8 @@ namespace QuanLyKho.Areas.Admin.Controllers
             return View(congNo);
         }
 
-        // GET: Admin/CongNoes/Delete/5
+        // GET: Admin/CongNoes/Delete/
+        [HasCredential(RoleID = "DEL_CONGNO")]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -116,6 +124,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // POST: Admin/CongNoes/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "DEL_CONGNO")]
         public ActionResult DeleteConfirmed(string id)
         {
             CongNo congNo = db.CongNoes.Find(id);

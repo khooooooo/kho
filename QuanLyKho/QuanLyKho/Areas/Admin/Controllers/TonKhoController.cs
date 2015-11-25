@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using QuanLyKho.Models.Entities;
+using QuanLyKho.Areas.Common;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
@@ -15,6 +16,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         private Entities db = new Entities();
 
         // GET: Admin/TonKho
+        [HasCredential(RoleID = "VIEW_HH")]
         public ActionResult Index()
         {
             var hangHoas = db.HangHoas.Include(h => h.LoaiHang).Include(h => h.NhomHang);
@@ -22,6 +24,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/TonKho/Details/5
+        [HasCredential(RoleID = "VIEW_HH")]
         public ActionResult Details(string id)
         {
             if (id == null)

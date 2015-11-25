@@ -24,7 +24,7 @@ namespace QuanLyKho.Areas.Main.Controllers
         public ActionResult Login(LoginViewModel model)
         {
             var db = new KhoDb();
-            var result = db.Login(model.Name, Encryptor.MD5Hash(model.Pwd));
+            var result = db.Login(model.Name, Encryptor.MD5Hash(model.Pwd),false);
             if (!ModelState.IsValid)
             {
                 if (result == 1)
@@ -32,17 +32,23 @@ namespace QuanLyKho.Areas.Main.Controllers
                     var user = db.GetByID(model.Name);
                     var userSession = new Common.UserLogin();
                     userSession.UserName = user.TenTK;
-                   
-                    Session.Add(Common.Common.USER_SESSION,userSession);
-                    return RedirectToAction("index","GiaoDich", new { area = "Admin"});
+                    var list = db.GetListCredential(model.Name);
+                    Session.Add(Common.Common.SESSION_CREDENTIAL, list);
+                    Session.Add(Common.Common.USER_SESSION, userSession);
+                    return RedirectToAction("index", "GiaoDich", new { area = "Admin" });
                 }
                 else
                 {
                     if (result == -1)
                         ModelState.AddModelError("", "Nhập sai password");
-                    else ModelState.AddModelError("", "Tài khoản không tồn tại");
+                    else
+                    {
+                        if (result == -2)
+                            ModelState.AddModelError("", "Bạn không có quyền đăng nhập");
+                    }
 
                 }
+               
             }
             return View();
         }

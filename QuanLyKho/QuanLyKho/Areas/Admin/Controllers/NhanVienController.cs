@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using QuanLyKho.Models.Entities;
+using QuanLyKho.Areas.Common;
 
 namespace QuanLyKho.Areas.Admin.Controllers
 {
@@ -15,6 +16,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         private Entities db = new Entities();
 
         // GET: Admin/NhanVien
+        [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult Index()
         {
             var nhanViens = db.NhanViens.Include(n => n.ChuCuaHang).Include(n => n.PhanQuyen);
@@ -22,6 +24,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/NhanVien/Details/5
+        [HasCredential(RoleID = "VIEW_USER")]
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -37,6 +40,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/NhanVien/Create
+        [HasCredential(RoleID = "CREATE_USER")]
         public ActionResult Create()
         {
             ViewBag.TenTK_Chu = new SelectList(db.ChuCuaHangs, "TenTK", "FullName");
@@ -49,6 +53,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "VIEW_USER")]   
         public ActionResult Create([Bind(Include = "TenTK,FullName,ChucVu,SDT,Email,MaPQ,Pwd,TenTK_Chu")] NhanVien nhanVien)
         {
             if (ModelState.IsValid)
@@ -64,6 +69,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/NhanVien/Edit/5
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -85,6 +91,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "EDIT_USER")]
         public ActionResult Edit([Bind(Include = "TenTK,FullName,ChucVu,SDT,Email,MaPQ,Pwd,TenTK_Chu")] NhanVien nhanVien)
         {
             if (ModelState.IsValid)
@@ -99,6 +106,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         }
 
         // GET: Admin/NhanVien/Delete/5
+        [HasCredential(RoleID = "DEL_USER")]
         public ActionResult Delete(string id)
         {
             if (id == null)
@@ -116,6 +124,7 @@ namespace QuanLyKho.Areas.Admin.Controllers
         // POST: Admin/NhanVien/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [HasCredential(RoleID = "DEL_USER")]
         public ActionResult DeleteConfirmed(string id)
         {
             NhanVien nhanVien = db.NhanViens.Find(id);
