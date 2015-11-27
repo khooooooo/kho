@@ -29,11 +29,11 @@ namespace QuanLyKho.Models.Entities
 
         public bool LoaiHD { get; set; }
 
+
         [Required]
         [StringLength(50)]
         public string TenTK_NV { get; set; }
 
-        [Required]
         [StringLength(10)]
         public string MADT { get; set; }
 

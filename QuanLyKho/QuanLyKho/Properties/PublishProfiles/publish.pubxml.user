@@ -9,6 +9,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <_PublishTargetUrl>E:\ASP.NET\ASPNETMVC\Intern Project\Publish</_PublishTargetUrl>
   </PropertyGroup>
   <ItemGroup>
+    <File Include="Areas/Admin/Controllers/KHController.cs">
+      <publishTime>11/25/2015 10:16:36</publishTime>
+    </File>
     <File Include="Areas/Admin/Views/CongNo/Create.cshtml">
       <publishTime>11/23/2015 08:53:58</publishTime>
     </File>

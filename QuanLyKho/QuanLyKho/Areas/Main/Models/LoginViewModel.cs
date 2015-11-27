@@ -14,6 +14,7 @@ namespace QuanLyKho.Areas.Admin.Models
 
         [Required(ErrorMessage ="Chưa nhập Password")]
         [Display(Name ="Mật khẩu")]
+        [DataType(DataType.Password)]
         public string Pwd { get; set; }
 
         [Required]

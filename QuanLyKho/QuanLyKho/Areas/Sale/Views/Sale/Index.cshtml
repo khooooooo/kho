@@ -1,40 +1,29 @@
 ﻿@model IEnumerable<QuanLyKho.Models.Entities.HinhAnh>
+
 @{
     ViewBag.Title = "Index";
+   
 }
+
 
 @foreach (var item in Model) { 
     <div class="row">
         <div class="col-lg-3 col-md-4 col-xs-6 thumb">
             <div class="thumbnail">
-                <img src="@item.PathFile" alt=@item.TenIMG/>
+                <img src="@Url.Content(( string.IsNullOrEmpty(item.PathFile) ) ? item.PathFile : "~/Content/image/noimage.png")" alt=@item.TenIMG />
                 <div class="caption">
                     <h4 class="pull-right">@item.HangHoa.GiaBan</h4>
                 </div>
                 <div class="add-cart">
-                    <h4> @Html.ActionLink("Thêm vào giỏ","Add_Cart","Sale", new {id= item.MaHH }, new { quantity = 1 })</h4>
+                    <h4> 
+                    <a href="@Url.Action("AddCart","Cart", new { id = item.MaHH, soluong = 1, donGia=item.HangHoa.GiaBan,area= "Sale" })" >Them</a>
+                    </h4>
                 </div>
 
             </div>
         </div>
 
     </div>
-    <div class="row">
-        <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <div class="thumbnail">
-                <img src="@Url.Content(( string.IsNullOrEmpty(item.PathFile) ) ? item.PathFile : "~/Cotent/image/noimage.png")" alt=@item.TenIMG />
-                <div class="caption">
-                    <h4 class="pull-right">@item.HangHoa.GiaBan</h4>
-                </div>
-                <div class="add-cart">
-                    <h4> @Html.ActionLink("Thêm vào giỏ", "Add_Cart", "Sale", new { id = item.MaHH }, new { quantity = 1 })</h4>
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-
 }
 
 

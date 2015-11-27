@@ -24,6 +24,7 @@ namespace QuanLyKho.Models.Entities
         public virtual DbSet<HoaDon> HoaDons { get; set; }
         public virtual DbSet<KhoHang> KhoHangs { get; set; }
         public virtual DbSet<LoaiHang> LoaiHangs { get; set; }
+        public virtual DbSet<MOD> MODs { get; set; }
         public virtual DbSet<NganQuy> NganQuys { get; set; }
         public virtual DbSet<NhanVien> NhanViens { get; set; }
         public virtual DbSet<NhomHang> NhomHangs { get; set; }
@@ -50,10 +51,6 @@ namespace QuanLyKho.Models.Entities
             modelBuilder.Entity<CongNo>()
                 .Property(e => e.GiaTri)
                 .HasPrecision(15, 3);
-
-            modelBuilder.Entity<Credential>()
-                .Property(e => e.RoleID)
-                .IsFixedLength();
 
             modelBuilder.Entity<CuaHang>()
                 .HasMany(e => e.ChuCuaHangs)

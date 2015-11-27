@@ -48,14 +48,12 @@
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
                     </li>
+                    
                     <li>
-                        @Html.ActionLink("Sale", "Index", "Sale", new { area = "Sale" }, null)
+                        @Html.ActionLink("Admin", "Login", "Login", new { area = "Admin" }, null)
                     </li>
                     <li>
-                        @Html.ActionLink("Admin", "Index", "NCC", new { area = "Admin" }, null)
-                    </li>
-                    <li>
-                        @Html.ActionLink("Đăng Nhập", "Login", "Account", new { area = "Main" }, null)
+                        @Html.ActionLink("Nhân viên", "Login", "Account", new { area = "Main" }, null)
                     </li>
                     <li>
                         @Html.ActionLink("Đăng Ký", "Create", "CuaHangs", new { area = "Admin" }, null)

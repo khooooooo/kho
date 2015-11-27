@@ -1,0 +1,32 @@
+﻿@model List<QuanLyKho.Areas.Common.HangHoaList>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Sale/Views/Shared/_Layout.cshtml";
+   
+}
+
+<table>
+    <thead>
+        <tr>
+            <td>Mã SP</td>
+            <td>Tên SP</td>
+            <td> Số lượng</td>
+            <td>Đơn giá</td>
+            <td>Thành tiền</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Product.MaHH</td>
+                <td>@item.Product.TenHH</td>
+                <td>@item.Product.SoLuong</td>
+                <td>@item.Product.GiaBan</td>
+                <td>@(item.Product.SoLuong * item.Product.GiaBan)</td>
+            </tr>
+        }
+       
+    </tbody>
+</table>
+

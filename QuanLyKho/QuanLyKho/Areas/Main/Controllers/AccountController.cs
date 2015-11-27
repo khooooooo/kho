@@ -12,6 +12,7 @@ namespace QuanLyKho.Areas.Main.Controllers
     public class AccountController : Controller
     {
         // GET: Admin/Account
+        public static string ID_NV = "";
         public ActionResult Index()
         {
             return View();
@@ -36,6 +37,7 @@ namespace QuanLyKho.Areas.Main.Controllers
                     Session.Add(Common.Common.SESSION_CREDENTIAL, list);
                     Session.Add(Common.Common.USER_SESSION, userSession);
                     return RedirectToAction("index", "GiaoDich", new { area = "Admin" });
+                    ID_NV = model.Name;
                 }
                 else
                 {

@@ -24,13 +24,18 @@ namespace QuanLyKho.Models.Entities
         [StringLength(50)]
         public string TenHH { get; set; }
 
-        public int SoLuong { get; set; }
+        public double SoLuong { get; set; }
 
         [Required]
         [StringLength(50)]
         public string KichThuoc { get; set; }
 
         public double KhoiLuong { get; set; }
+
+
+        [Required]
+        [StringLength(10)]
+        public string DVT { get; set; }
 
         [Column(TypeName = "date")]
         public DateTime NgaySX { get; set; }

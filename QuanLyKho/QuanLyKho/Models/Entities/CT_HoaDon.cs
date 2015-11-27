@@ -20,10 +20,6 @@ namespace QuanLyKho.Models.Entities
 
         public double SoLuong { get; set; }
 
-        [Required]
-        [StringLength(10)]
-        public string DVT { get; set; }
-
         public double DonGia { get; set; }
 
         public virtual HangHoa HangHoa { get; set; }

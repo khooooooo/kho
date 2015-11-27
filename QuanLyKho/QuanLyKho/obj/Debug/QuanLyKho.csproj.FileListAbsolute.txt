@@ -50,26 +50,6 @@ E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\roslyn\VBC
 E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll.config
 E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll
 E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\QuanLyKho.pdb
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.Web.Infrastructure.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Razor.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.dll
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Razor.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.xml
-E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
 E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.dll
 E:\ASP.NET\ASPNETMVC\Intern Project\Share\kho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
 E:\DoAnThucTap\QuanLyKho\QuanLyKho\bin\roslyn\csc.exe

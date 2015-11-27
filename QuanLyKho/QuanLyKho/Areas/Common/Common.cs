@@ -10,5 +10,6 @@ namespace QuanLyKho.Areas.Common
     {
         public static string USER_SESSION = "USER_SESSION";
         public static string SESSION_CREDENTIAL = "SESSION_CREDENTIAL";
+        public const string CartSession = "CART_SESION";
     }
 }

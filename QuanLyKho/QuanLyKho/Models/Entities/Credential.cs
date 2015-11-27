@@ -7,7 +7,6 @@ namespace QuanLyKho.Models.Entities
     using System.Data.Entity.Spatial;
 
     [Table("Credential")]
-    [Serializable]
     public partial class Credential
     {
         [Key]
@@ -17,7 +16,7 @@ namespace QuanLyKho.Models.Entities
 
         [Key]
         [Column(Order = 1)]
-        [StringLength(10)]
+        [StringLength(50)]
         public string RoleID { get; set; }
     }
 }

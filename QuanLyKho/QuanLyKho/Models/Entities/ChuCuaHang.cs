@@ -34,6 +34,7 @@ namespace QuanLyKho.Models.Entities
 
         [Required]
         [StringLength(50)]
+        [DataType(DataType.Password)]
         public string Pwd { get; set; }
 
         [Required]
